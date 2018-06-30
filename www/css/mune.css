@@ -1,0 +1,115 @@
+.nav>.left {
+    float: left;
+    width: 190px;
+    height: 470px;
+    position: relative;
+    background-color: white;
+  }
+.nav>.left>ul {
+    padding: 10px 0px;
+    list-style: none;
+  }
+.nav>.left>ul li {
+    padding-left: 18px;
+  }
+.nav>.left>ul li .list {
+    position: absolute;
+    width: 1000px;
+    height: 470px;
+    border: 1px solid #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    background-color: white;
+    top: 0px;
+    left: 190px;
+    display: none;
+    z-index: 9;
+    padding: 20px;
+  }
+.nav>.left>ul li .list .list_left {
+    width: 800px;
+  }
+.nav>.left>ul li .list .list_left .top ul {
+    list-style: none;
+    display: flex;
+  }
+.nav>.left>ul li .list .list_left .top ul li {
+    margin-right: 10px;
+    padding: 0 10px;
+    height: 24px;
+    background-color: #333;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+  }
+.nav>.left>ul li .list .list_left .top ul li:hover {
+    opacity: 0.8;
+  }
+.nav>.left>ul li .list .list_left .bottom dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 80px;
+  }
+.nav>.left>ul li .list .list_left .bottom dl dt {
+    overflow: hidden;
+    font-size: 12px;
+    width: 80px;
+    text-align: right;
+    font-weight: 700;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+    position: absolute;
+    left: 0px;
+  }
+.nav>.left>ul li .list .list_left .bottom dl dd {
+    margin: 3px 0;
+    padding: 0 10px;
+    height: 16px;
+    border-left: 1px solid #e0e0e0;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+  }
+.nav>.left>ul li .list .list_right {
+    width: 200px;
+    height: 100%;
+  }
+.nav>.left>ul li .list .list_right .imgboxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 168px;
+    margin-bottom: 20px;
+  }
+.nav>.left>ul li .list .list_right .imgboxs img {
+    width: 48.7%;
+    box-sizing: border-box;
+    margin: 1px;
+    height: 35px;
+  }
+.nav>.left>ul li .list .list_right .imgbox {
+    height: 134px;
+  }
+.nav>.left>ul li .list .list_right .imgbox img {
+    height: 100%;
+  }
+.nav>.left>ul li:hover {
+    background-color: #ccc;
+  }
+.nav>.left>ul li:hover .list {
+    display: flex;
+  }
+.nav>.left>ul li a {
+    line-height: 29px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+.nav>.left>ul li a:hover {
+    color: #f10215;
+  }
+  

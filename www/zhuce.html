@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/zhuce2.css">
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            min-width: 1435px;
+        }
+        header{
+            width: 100%;
+            height: 94px;
+            background-color: white;
+            box-shadow: 0 2px 10px 2px gainsboro;
+            min-width: 1435px;
+        }
+        .logo{
+            width: 60%;
+            margin: auto;
+        }
+        .logo>a{
+            display: inline-block;
+            width: 160px;
+            float: left;
+            height: 50px;
+            margin-top: 20px;
+            background-image: url(img/icon.png);
+        }
+        .logo .logo-left{
+            /* margin-top: 20px; */
+            /* position: absolute; */
+            line-height:94px;
+            font-size: 30px;
+            display: inline-block;
+        }
+        .logo .logo-right{
+            float: right; 
+            margin-top: 55px;
+            color: #999
+        }
+        .logo .logo-right a{
+            color: red;
+            text-decoration: none;
+        }
+        .clearfix{
+            clear: both;
+        }
+        nav{
+            width: 100%;
+            margin-top:100px;  
+            min-width: 1435px;
+        }
+        .container{
+            width: 500px;
+            margin: auto;
+        }
+        .container .pr{
+            display: flex;
+            font-size: 14px;
+            justify-content: center
+        }
+        .container .pr section{
+            width: 30px;
+            height: 30px;
+            margin: auto;
+        }
+        .container .pr span{
+            display: inline-block;
+            width: 30px;
+            vertical-align: middle;
+            border-radius: 50%;
+            background-color: gainsboro;
+            line-height: 30px;
+            text-align: center;
+        }
+        .container .pr .active span{
+            background-color: yellowgreen;
+            color: white;            
+        }
+        .container .pr .active p{
+            color: yellowgreen;
+        }
+        .container .form{
+            margin-top: 50px;
+        }
+        .container .form .span{
+            display: inline-block;
+            width: 18px;
+            height: 10px;
+            background-image: url(img/icon.png);
+            background-position-y:15px;
+        }
+        .container .form label{
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid gainsboro;
+            border-right: none;
+            position: relative;
+            top:2px;
+        }
+        .container .form .txt,#yzm{
+            width: 320px;
+            height: 41px;
+            padding:0 20px; 
+            border: 1px solid gainsboro;
+            outline: none;
+        }
+        .container .form input::placeholder{
+            color: gainsboro;
+        }
+        .container .form .icons{
+            display: inline-block;
+            width: 17px;
+            height: 20px;
+            background-image: url(img/icon.png);
+            background-position-y: -97px;
+            position: relative;
+            top: 5px;
+            display: none;
+        }
+        .container .form .yc{
+            height: 20px;
+        }
+        .container .form .yz{
+            display: none;
+            font-size: 14px;
+            color: #999;
+
+        }
+        .container .form .btn{
+            color: black;
+            font-size: 14px;
+            width: 483px;
+            line-height: 50px;
+            border: 1px solid gainsboro;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .container .form .btn:hover{
+            border:1px solid black;
+        }
+        .container .form .nex{
+            margin-top: 45px;   
+            text-align: center;
+            color: white;
+            /* font-weight: bold; */
+            width: 483px;
+            background-color: red;
+        }
+        .container .form .nex input{
+            display: block;
+            color: white;
+            text-decoration: none;
+            width: 483px;
+            line-height: 40px;
+            background-color: red;
+            font-size: 20px;
+            
+        }
+        .container .zc{
+            margin-top: 15px;
+        }
+        .container .zc .icon{
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background-image: url(img/reg.png);
+            position: relative;
+            top: 7px;
+        }   
+        .container .zc .one{
+            background-position-y: -160px;
+        }
+        .container .zc .two{
+            background-position: -40px -160px;
+        }
+        .container .zc .zc-left{
+            float: left;
+        }
+        .container .zc .zc-right{
+            margin-right:17px; 
+            float: right;
+        }
+        .container .zc .bs:hover{
+            color: red;
+        }
+        footer{
+            min-width: 1435px;
+        }
+        .top{
+            width: 60%;
+            margin: auto;
+            border-top: 1px solid #999;
+            text-align: center;
+            margin-top:150px;
+            padding: 35px 0 0 0;
+        }
+        .top a{
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .top a:hover{
+            text-decoration: underline;
+        }
+        .top b{
+            display: inline-block;
+            width: 1px;
+            height: 16px;
+            background-color: #999;
+            position: relative;
+            top: 3px;
+            margin: 0 5px;
+        }
+        footer .bottom{
+            text-align: center;
+            color: #999;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        @media screen and (max-width: 1435px){
+            .top a{
+                font-size: 12px;
+            }
+            .top b{
+                margin: 0 3px;
+            }
+        }
+        #yzm{
+            width: 150px;
+        }
+        button{
+            width: 170px;
+            height: 43px;
+        }
+        .btns{
+            margin-top: 30px;
+            display: none;
+        }
+        .container .reg{
+            width: 124px;
+            height: 20px;
+            background-image: url("img/reg.png");
+            background-position: 0 -100px;
+            position: relative;
+            top:10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"></a>
+            <div class="logo-left">欢迎注册</div>
+            <div class="logo-right">已有账号？<a href="denglu.html" class="dl">请登录></a></div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <div class="pr">
+                <div class="active">
+                    <section><span>1</span></section>
+                    <p>验证手机号</p>
+                </div>            
+                <div class="reg thr"></div>
+                <div class="mid">
+                    <section><span>2</span></section>
+                    <p>填写账号信息</p>
+                </div>
+                <div class="reg four"></div>
+                <div>
+                    <section><span>3</span></section>
+                    <p>注册成功</p>
+                </div>     
+            </div>
+            <form action="/one" method="GET" class="form" style="display:block ">
+                <label for="">中国0086<span class=".span"></span></label><input required type="text" class="txt" pattern="^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$" placeholder="建议使用常用手机号"><br>
+                <div class="yc">
+                    <span class="icons"></span><span class="yz">&#x3000;完成验证后，可以使用该手机登录或找回密码</span>
+                </div> 
+                <div class="btn">点击按钮进行验证</div>
+                <div class="btns">
+                    <label for="">手机验证码</label><input type="text" id="yzm" placeholder="输入验证码"><button disabled="false">获取验证码</button><br>
+                    <div style="display: none"><span class="icons" style="display: inline-block"></span><span class="yz" style="display: inline-block">&#x3000;该手机还可以获取2次验证码</span></div>
+                </div>
+                <div class="nex"><input type="submit" placeholder="下一步" disabled class="sb"></div>
+            
+            </form>
+            <form action="/two" method="POST" class="form-Two" style="display:none">
+                <div>
+                    <label for="">用户名</label><input type="text" name="user" required placeholder="您的账户名和登录名" pattern="^[\u4E00-\u9FA5a-zA-Z0-9_-]{4,10}$">
+                </div>
+                <div style="height: 20px;border: none;color: orange;font-size: 12px"><span></span> </div>
+                <div>
+                    <label for="">设置密码</label><input type="password" name="password" required placeholder="建议使用两种或两种以上的字符组合" pattern="^[a-zA-Z0-9_-]{6,20}$">
+                </div>
+                <div style="height: 20px;border: none;color: orange;font-size: 12px"><span></span> </div>
+                <div>
+                    <label for="">确认密码</label><input type="password" name="passwordTo" placeholder="请再次输入密码" required pattern="^[a-zA-Z0-9_-]{6,20}$">
+                </div>               
+                 <div style="height: 20px;border: none;color: orange;font-size: 12px"><span></span> </div>
+                <div>
+                    <label for="">邮箱验证</label><input type="email" name="email" placeholder="请输入邮箱" required pattern="^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$">
+                </div>
+                <div style="height: 20px;border: none;color: orange;font-size: 12px"><span></span></div>
+                <div class="five">
+                    <label for="">邮箱验证码</label><input type="text" required placeholder="请输入邮箱验证码"><label for="" class="hq">获取验证码</label>
+                </div>
+                <input type="submit" value="立即注册" disabled class="tj">
+            </form>
+            <div class="zc">
+                <div class="zc-left">
+                    <span class="icon one"></span><span class="bs"> 企业用户注册</span>
+                </div> 
+                <div class="zc-right">
+                    <span class="icon two"></span><span class="bs"> 国际站注册</span>
+                </div> 
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <span class="ic"></span>
+            <p></p>
+            <span>您已成功注册为京东用户，祝您购物愉快~</span>
+            <a href="gouwuc.html">去购物</a>
+        </div>
+    </main>
+    <footer>
+        <div class="top">
+            <a href="">关于我们</a>
+            <b></b>
+            <a href="">联系我们</a>
+            <b></b>
+            <a href="">人才招聘</a>
+            <b></b>
+            <a href="">商家入驻</a>
+            <b></b>
+            <a href="">广告服务</a>
+            <b></b>
+            <a href="">手机京东</a>
+            <b></b>
+            <a href="">友情链接</a>
+            <b></b>
+            <a href="">销售联盟</a>
+            <b></b>
+            <a href="">京东社区</a>
+            <b></b>
+            <a href="">京东公益</a>
+            <b></b>
+            <a href="">English Site</a>
+        </div>
+        <div class="bottom">Copyright©2004-2018  京东JD.com 版权所有</div>
+    </footer>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(".form>label").hover(function () {
+            $(this).css({
+                border:"1px solid black",
+                borderRight:"none",
+            })
+            $(".txt").css("border","1px solid black")
+        },function () {
+            $(this).css({
+                border:"1px solid gainsboro",
+                borderRight:"none",
+            })
+            $(".txt").css("border","1px solid gainsboro")
+        })
+        $(".txt").focus(function () {
+            $(".yc .icons,.yc .yz").css("display","inline-block");
+            $(this).css("border","1px solid black")
+        })
+        $(".txt").blur(function () {
+            $(".yc .icons,.yc .yz").css("display","none");
+            $(this).css("border","1px solid gainsboro")
+        })
+        
+        $(".btn").click(function(){
+            if(reg.test($(".txt").val())){
+            $(this).css("display","none");
+            $(".btns").css("display","block"); 
+            }
+        })
+        
+       
+        var reg=/^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/;
+        var tel="";
+        var strs='';
+        $(".txt").on("input",function(){            
+            console.log(reg.test($(".txt").val())); 
+            if(reg.test($(".txt").val())){
+                $("button").removeAttr("disabled");
+            }
+        })
+        $("button").click(function(e){
+            e.preventDefault();
+            $(".btns div").css("display","block");
+            function getCode() {
+                var str = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+                var strs=str.split("").sort(function() {
+                    return Math.random() - 0.5;
+                }).slice(0, 4).join("");
+                console.log(strs);
+                $("#yzm").on("input",function () {
+                    console.log($("#yzm").val()==strs)
+                    if($("#yzm").val()==strs){
+                        $(".nex .sb").removeAttr("disabled");
+                    }
+                })
+            }
+            getCode(); 
+        })
+        var tell='';
+        $(".form .nex input").click(function (e) {
+            e.preventDefault();
+            tel=$(".txt").val();
+            $.get({
+                url:"/one",
+                data:{
+                    list:tel
+                },
+                success:function(data){
+                    if(data.code==1){
+                        alert(data.info);
+                        location.href="zhuce.html"
+                    }
+                }
+            })
+            $(".form").css("display","none");
+            $(".form-Two").css("display","block");
+            $(".thr").css("backgroundPosition","0 -130px")
+            tell=tel; 
+        })
+       
+       
+    </script>
+    <script src="js/zhuce.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.form-Two div{
+    border: 1px solid #999;
+    width: 483px;
+    height: 50px;
+    margin: 10px 0;
+}
+.form-Two label{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
+.form-Two input{
+    border: none;
+    width: 300px;
+    outline: none;
+}
+.form-Two input:placeholder{
+    color: #999;
+}
+.form-Two .five input{
+    width: 230px;
+}
+.form-Two .five label:nth-of-type(2){
+    padding: 0 10px; 
+    width: 81px;
+    border-left:1px solid #999; 
+}
+.form-Two input[type=submit]{
+    width: 483px;
+    height: 50px;
+    font-size: 22px;
+    color: white;
+    background-color: red;
+    margin-top: 20px;
+}
+main{
+    display: none;
+    margin:50px 0 500px 0;
+}
+main div{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+main .ic{
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/icon.png");
+    background-position: 306px -43px;
+}
+main p{
+    font-size: 20px;
+    font-weight: 600;
+}
+main a{
+    display: block;
+    text-decoration: none;
+    width: 60px;
+    color: white;
+    background-color: red;
+    line-height: 30px;
+    margin: 30px auto;
+}

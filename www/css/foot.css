@@ -1,0 +1,192 @@
+footer{
+    background-color: #f0f3ef;  
+    margin-top: 30px;  
+}
+footer .footer_top {
+    width: 1190px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footer_top section {
+    width: 225px;
+  }
+  footer .footer_top section i {
+    display: inline-block;
+    width: 36px;
+    height: 42px;
+    background-image: url("../img/bgo.png");
+  }
+  footer .footer_top section p {
+    overflow: hidden;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+    margin-left: 20px;
+    display: inline-block;
+  }
+  footer .footer_top section:nth-child(1) i {
+    background-position: 0 -192px;
+  }
+  footer .footer_top section:nth-child(2) i {
+    background-position: -41px -192px;
+  }
+  footer .footer_top section:nth-child(3) i {
+    background-position: -82px -192px;
+  }
+  footer .footer_top section:nth-child(4) i {
+    background-position: -123px -192px;
+  }
+  footer .line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(80,80,80,0.5);
+    margin: 50px 0 30px 0;
+  }
+  footer .footer_main {
+    width: 1190px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footer_main .footer_main_left ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+  }
+  footer .footer_main .footer_main_left ul li {
+    width: 198px;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  footer .footer_main .footer_main_left ul li dl {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  footer .footer_main .footer_main_left ul li dl dd {
+    margin: 10px 0;
+    color: #333;
+  }
+  footer .footer_main .footer_main_left ul li dl dd:hover {
+    color: red;
+  }
+  footer .footer_main .footer_main_right section {
+    width: 200px;
+    height: 150px;
+    background-image: url("../img/bgo.png");
+    background-position: 0 0;
+    text-align: center;
+  }
+  footer .footer_main .footer_main_right section h5 {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  footer .footer_main .footer_main_right section p {
+    text-align: left;
+    font-size: 12px;
+  }
+  footer .footer_main .footer_main_right section span {
+    text-align: right;
+    float: right;
+  }
+  footer .footer_bottom {
+    width: 1190px;
+    margin: auto;
+    color: #333;
+  }
+  footer .footer_bottom ul {
+    list-style: none;
+    display: flex;
+    /* padding: 0; */
+  }
+  footer .footer_bottom ul li {
+    margin: 0 7px;
+    font-size: 12px;
+    /* line-height: 12px; */
+    position: relative;
+    top: 3px;
+  }
+  footer .footer_bottom ul li:hover {
+    color: red;
+  }
+  footer .footer_bottom p {
+    text-align: center;
+    font-size: 12px;
+  }
+  footer .footer_bottom p a {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+  }
+  footer .footer_bottom p a:hover {
+    color: red;
+  }
+  footer .footer_bottom .icon {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  footer .footer_bottom .icon section {
+    display: inline-block;
+  }
+  footer .footer_bottom .icon section i {
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    background-image: url("../img/bgo.png");
+  }
+  footer .footer_bottom .icon section span {
+    color: #999;
+  }
+  footer .footer_bottom .icon section span:hover {
+    color: red;
+  }
+  footer .footer_bottom .icon section:nth-child(1) i {
+    background-position: -108px -155px;
+  }
+  footer .footer_bottom .icon section:nth-child(2) i {
+    background-position: -168px -155px;
+  }
+  footer .footer_bottom .icon section:nth-child(3) i {
+    background-position: -148px -155px;
+  }
+  footer .footer_bottom .icon section:nth-child(4) i {
+    background-position: -128px -155px;
+  }
+  footer .footer_bottom .last_img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer .footer_bottom .last_img section {
+    width: 103px;
+    height: 32px;
+    margin: 0 10px;
+    display: inline-block;
+    background-image: url("../img/bgo.png");
+  }
+  footer .footer_bottom .last_img section:nth-child(1) {
+    background-position: -205px -148px;
+  }
+  footer .footer_bottom .last_img section:nth-child(2) {
+    background-position: -205px -111px;
+  }
+  footer .footer_bottom .last_img section:nth-child(3) {
+    background-position: -205px -74px;
+  }
+  footer .footer_bottom .last_img section:nth-child(4) {
+    background-position: -205px -37px;
+  }
+  footer .footer_bottom .last_img section:nth-child(5) {
+    background-position: -205px 0;
+  }
+  footer .footer_bottom .last_img section:nth-child(6) {
+    background-position: 0 -155px;
+  }
+  

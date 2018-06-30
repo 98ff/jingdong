@@ -1,0 +1,120 @@
+.y_img_kuang_right {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+.y_img_kuang_right .kuang::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 340px;
+  height: 420px;
+  border: solid 5px #333;
+  top: 20px;
+  left: 20px;
+}
+.y_img_kuang_right .kuang .img {
+  width: 340px;
+  height: 420px;
+  position: relative;
+  z-index: 2;
+}
+.y_img_kuang_right .kuang .img img {
+  width: 100%;
+  height: 100%;
+}
+.y_img_kuang_left {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+.y_img_kuang_left .kuang::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 340px;
+  height: 420px;
+  border: solid 5px #333;
+  top: 20px;
+}
+.y_img_kuang_left .kuang .img {
+  width: 340px;
+  height: 420px;
+  position: relative;
+  z-index: 2;
+  margin-left: 30px;
+}
+.y_img_kuang_left .kuang .img img {
+  width: 100%;
+  height: 100%;
+}
+.y_two_img_kuang_left {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+.y_two_img_kuang_left .kuang::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 340px;
+  height: 420px;
+  border: solid 5px #333;
+  top: 20px;
+}
+.y_two_img_kuang_left .kuang .img {
+  width: 340px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  z-index: 2;
+  margin-left: 30px;
+}
+.y_two_img_kuang_left .kuang .img::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 200px;
+  border: solid 2.8px white;
+  top: 20px;
+  right: 20px;
+  z-index: -1;
+}
+.y_two_img_kuang_right {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+.y_two_img_kuang_right .kuang::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 340px;
+  height: 420px;
+  border: solid 5px #333;
+  top: 20px;
+  left: 20px;
+}
+.y_two_img_kuang_right .kuang .img {
+  width: 340px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  z-index: 2;
+}
+.y_two_img_kuang_right .kuang .img::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 200px;
+  border: solid 2.8px white;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}

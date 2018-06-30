@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面</title>
+	<script src="js/jquery-3.3.1.js"></script>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		nav {
+			width: 1000px;
+			height: 70px;
+			margin: 0 auto;
+		}
+
+		nav span:nth-of-type(2) {
+			float: right;
+			line-height: 50px;
+		}
+
+		nav span:nth-of-type(2) p a {
+			color: gray;
+			text-decoration: none;
+		}
+
+		nav span:nth-of-type(2) p a:hover {
+			color: red;
+		}
+
+		.orange {
+			height: 40px;
+			width: 1920px;
+			background-color: oldlace;
+			text-align: center;
+			line-height: 40px;
+			color: gray;
+			font-size: 13px;
+		}
+
+		main {
+			height: 475px;
+			width: 1920px;
+			background-image: url("img/bj.png");
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: #e93854;
+			position: relative;
+		}
+
+		.login {
+			width: 345px;
+			height: 440px;
+			background-color: white;
+			position: absolute;
+			top: 10px;
+			right: 455px;
+			/*position: ;*/
+		}
+
+		.second {
+			width: 100%;
+		}
+		input{
+			outline: none;
+		}
+
+		.Account {
+			height: 55px;
+			width: 100%;
+			border-bottom: 1px solid lightgray;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		.Account span:first-child {
+			color: red;
+		}
+
+		.Scan_code {
+			height: 285px;
+			width: 100%;
+			border-bottom: 1px solid lightgrey;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/*justify-content: center;*/
+		}
+
+		.code_pic {
+			width: 170px;
+			height: 170px;
+			border: 1px solid lightgrey;
+			text-align: center;
+			line-height: 300px;
+			margin-top: 20px;
+		}
+
+		.font {
+			font-size: 14px;
+			margin-top: 25px;
+		}
+
+		.font a {
+			text-decoration: none;
+			color: red;
+		}
+
+		.pic_p {
+			font-size: 13px;
+			color: gray;
+			margin-top: 20px;
+		}
+
+		.pic_p img {
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+		}
+
+		.bottom {
+			height: 58px;
+			width: 100%;
+			background-color: whitesmoke;
+		}
+
+		.bottom_left {
+			display: inline-block;
+		}
+
+		.bottom_left p {
+			line-height: 58px;
+			display: inline-block;
+			font-size: 14px;
+			margin-left: 15px;
+		}
+
+		.bottom_left img {
+			width: 25px;
+			height: 25px;
+			vertical-align: middle;
+		}
+
+		.bottom_left p a {
+			color: gray;
+			margin-left: 5px;
+			text-decoration: none;
+		}
+
+		.bottom_right {
+			height: 58px;
+			width: 100px;
+			display: inline-block;
+			float: right;
+		}
+
+		.bottom_right p {
+			line-height: 58px;
+		}
+
+		.bottom_right img {
+			height: 25px;
+			width: 25px;
+			vertical-align: middle;
+		}
+
+		.bottom_right p a {
+			text-decoration: none;
+			color: red;
+		}
+
+		footer {
+			height: 80px;
+			widows: 1920px;
+			/*background-color: gold;*/
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			line-height: 40px;
+		}
+
+		footer ul li {
+			float: left;
+			list-style: none;
+			margin-left: 5px;
+		}
+
+		footer ul li:last-child:after {
+			content: '';
+		}
+
+		footer ul li a {
+			text-decoration: none;
+			color: gray;
+			font-size: 15px;
+		}
+
+		footer ul li:after {
+			content: '  |';
+			color: gray;
+		}
+
+		footer p {
+			font-size: 15px;
+			color: gray;
+		}
+
+		/*这里是弹出框部分*/
+
+		.Popup {
+			width: 345px;
+			height: 300px;
+			/*background-color: gold;*/
+			position: absolute;
+			left: 0;
+			top: 95px;
+			border-top: 1px solid lightgray;
+			display: none;
+			/*overflow: hidden;*/
+		}
+
+		.input-group {
+			width: 100%;
+			height: 242px;
+			/*background-color: aquamarine;*/
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.input_box {
+			width: 100%;
+			height: 40px;
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/*background-color: yellowgreen;*/
+			position: relative;
+		}
+
+		.input_box input {
+			width: 180px;
+			height: 100%;
+			margin-left: 23px;
+			padding: 0 0 0 20px;
+		}
+
+		.span_1 {
+			width: 30px;
+			height: 30px;
+			background-color: gainsboro;
+			position: absolute;
+			left: 50px;
+			top: 0;
+			text-align: center;
+		}
+
+		.span_1 img {
+			width: 25px;
+			height: 25px;
+		}
+
+		.input-group input[type=button] {
+			background-color: #e93854;
+			width: 70%;
+			height: 40px;
+			color: white;
+			border: none;
+			margin-top: 15px;
+			position: relative;
+			left: -8px;
+		}
+
+		.third {
+			border-top: 1px solid lightgray;
+		}
+		/* 附加更改 */
+		a{
+			text-decoration: none;
+		}
+		.pic_p .icons{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background-image: url("img/qr.png");
+			vertical-align: middle;
+		}
+		.pic_p .two{
+			background-position: -27px;
+			margin-left: 10px;
+		}
+		.pic_p .thr{
+			background-position: -54px;
+			margin-left: 10px;
+		}
+		.bottom_left .iic{
+			display: inline-block;
+			width: 19px;
+			height: 18px;
+			vertical-align: middle;
+			background-image: url("img/QQ.png");
+		}
+		.bottom_left .two{
+			background-position: -20px 0;
+		}
+		.Popup .pw{
+			display: inline-block;
+			width: 39px;
+			height: 38px;
+			vertical-align: middle;
+			background-image: url("img/pw.png");
+			position: relative;
+			left: -7px;
+			border: 1px solid #999;
+			border-right: none;
+		}
+		.Popup .two{
+			background-position: -48px 0;
+		}
+		.third .two{
+			background-position: -20px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<span>
+				<img src="img/logo.png" />
+				<img src="img/l-icon.png" />
+			</span>
+			<span>
+				<p>
+					<img src="img/q.png" />&nbsp;
+					<a href="">登录页面，调查问卷</a>
+				</p>
+			</span>
+		</nav>
+		<div class="orange">
+			<p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+				<a href="">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+		</div>
+	</header>
+	<main>
+		<div class="login">
+			<div class="orange second">
+				<p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+			</div>
+			<div class="Account">
+				<span id="code_login">扫码登录</span>
+				<span id="login">账号登录</span>
+			</div>
+			<div class="Scan_code">
+				<div class="code_pic">
+					<p>
+						<img src="img/show.jpg" />
+					</p>
+				</div>
+				<span class="font">打开
+					<a href="">手机京东</a> &#x3000;扫描二维码</span>
+				<p class="pic_p">
+					<b class="icons one"></b>
+					<span>免输入</span>
+					<b class="icons two"></b>
+					<span>更快</span>
+					<b class="icons thr"></b>
+					<span>更安全</span>
+				</p>
+			</div>
+			<div class="bottom" id="tan">
+				<div class="bottom_left">
+					<p>
+						<b class="iic one"></b>
+						<a href="">QQ</a>
+					</p>
+					<p>
+						<b class="iic two"></b>
+						<a href="">微信</a>
+					</p>
+				</div>
+				<div class="bottom_right">
+					<p>
+						<img src="img/qa.png" style="width: 16px;height: 16px;"/>
+						<a href="">立即注册</a>
+					</p>
+				</div>
+			</div>
+			<!--这里是弹出的部分-->
+			<div class="Popup">
+				<div class="input-group">
+					<div class="input_box">
+						<input type="text" placeholder="邮箱/用户名/已验证手机" name="user" id="zh" />
+						<span class="span_1">
+							<b class="pw one"></b>
+						</span>
+					</div>
+					<div class="input_box">
+						<input type="password" placeholder="密码" name="password" id="mm"/>
+						<span class="span_1">
+							<b class="pw two"></b>
+						</span>
+					</div>
+					<input type="button" name="" value="登录" />
+				</div>
+				<div class="bottom third">
+					<div class="bottom_left">
+						<p>
+						<b class="iic one"></b>
+							<a href="">QQ</a>
+						</p>
+						<p>
+						<b class="iic two"></b>
+							<a href="">微信</a>
+						</p>
+					</div>
+					<div class="bottom_right">
+						<p>
+							<img src="img/qa.png" style="width: 16px;height: 16px;"/>
+							<a href="">立即注册</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<ul>
+			<li>
+				<a href="">关于我们</a>
+			</li>
+			<li>
+				<a href="">联系我们</a>
+			</li>
+			<li>
+				<a href="">人才招聘</a>
+			</li>
+			<li>
+				<a href="">商家入驻 </a>
+			</li>
+			<li>
+				<a href="">广告服务</a>
+			</li>
+			<li>
+				<a href="">手机京东</a>
+			</li>
+			<li>
+				<a href="">友情链接</a>
+			</li>
+			<li>
+				<a href="">销售联盟</a>
+			</li>
+			<li>
+				<a href="">京东社区</a>
+			</li>
+			<li>
+				<a href="">京东公益</a>
+			</li>
+			<li>
+				<a href="">English Site</a>
+			</li>
+		</ul>
+		<p>Copyright © 2004-2018 京东JD.com 版权所有</p>
+
+	</footer>
+</body>
+<script type="text/javascript">
+	$(".bottom_right a").click(function (e) {
+		e.preventDefault()
+		location.href="zhuce.html"
+	})
+	$('#login').click(function () {
+		$('#login').css('color', 'red').siblings().css('color', 'black')
+		$('.Scan_code').css('display', 'none')
+		$('#tan').hide()
+		$('.Popup').show()
+		$('.login').css('height', '395px')
+	})
+
+	$('#code_login').click(function () {
+		//       		alert('646564')
+		$('#code_login').css('color', 'red').siblings().css('color', 'black')
+		$('.Popup').hide()
+		$('.Scan_code').show()
+		$('#tan').show()
+		$('.login').css('height', '440px')
+	})
+	var user='';
+	var password='';
+	$("[type=button]").click(function(){
+		user=$("[type=text]").val();
+		password=$("[type=password]").val();
+		$.post({
+			url:"/dl",
+			data:{
+				user:user,
+				password:password,
+			},
+			success:function(data){
+				if(data.code==0){
+					location.href="index.html";
+				}else{
+					alert(data.info)
+				}
+			}
+		})
+	})
+</script>
+
+</html>
